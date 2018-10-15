@@ -15,17 +15,17 @@ public partial class MainWindow : Gtk.Window
         a.RetVal = true;
     }
 
-	protected void OnBtnShowHelloPressed(object sender, EventArgs e)
-	{
-		var dialog = new MessageDialog(
+    protected void OnBtnShowHelloPressed(object sender, EventArgs e)
+    {
+        var dialog = new MessageDialog(
             this,
             DialogFlags.Modal,
             MessageType.Info,
             ButtonsType.Ok,
-			HelloHelper.SayHello(txbInput.Text)
-		);
+            HelloHelper.SayHello(txbInput.Text)
+        );
 
-		dialog.Run();
+        dialog.Run();
         dialog.Destroy();
-	}
+    }
 }
