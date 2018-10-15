@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+  </configuration>
+  <import>
+    <widget-library name="../bin/Debug/Hello.GTK.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="332 120">
+    <property name="MemberName" />
+    <property name="WidthRequest">332</property>
+    <property name="HeightRequest">100</property>
+    <property name="Title" translatable="yes">Hello</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <property name="Resizable">False</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.Fixed" id="fixed">
+        <property name="MemberName" />
+        <property name="WidthRequest">283</property>
+        <property name="HeightRequest">95</property>
+        <property name="HasWindow">False</property>
+        <child>
+          <widget class="Gtk.Entry" id="txbInput">
+            <property name="MemberName" />
+            <property name="WidthRequest">280</property>
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">●</property>
+          </widget>
+          <packing>
+            <property name="X">24</property>
+            <property name="Y">22</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btnShowHello">
+            <property name="MemberName" />
+            <property name="WidthRequest">80</property>
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Hello!</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Pressed" handler="OnBtnShowHelloPressed" />
+          </widget>
+          <packing>
+            <property name="X">130</property>
+            <property name="Y">71</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>
